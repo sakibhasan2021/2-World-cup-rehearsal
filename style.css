@@ -37,7 +37,13 @@ body{
     padding: 16px 25px;
     border-radius: 5px;
     margin-top: 30px;
+    transition: padding 0.3s;
 }
+.header button:hover{
+    padding: 20px 30px;
+}
+
+
 
 .top-section-img img{
    
@@ -50,6 +56,7 @@ body{
 
 
 .match-details{
+    margin:15px 40px;
     display:flex;
 }
 .button-container{
@@ -119,6 +126,18 @@ body{
     color: #00000044;
     margin-bottom: 10px;
 }
+.tablet-special-button button{
+    padding:10px 14px;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    background-color: orangered;
+    width: 20%;
+    margin-left: 50%;
+    margin-top:30px;
+   visibility: hidden;
+  
+}
 /* upcoming match style */
 .box{
     display:grid;
@@ -157,6 +176,20 @@ footer h1{
     transform:translateY(50%);
     letter-spacing:5px;
     font-family: 'Rubik Maze', cursive;
+    animation: GOAL 5s ease-in infinite;
+}
+
+@keyframes GOAL {
+    0%{
+        transform: translateY(0%);
+    }
+    75%{
+        letter-spacing:15px;
+    }
+    100%{
+        transform: translateY(75%);
+    }
+    
 }
 
 hr{
@@ -186,12 +219,29 @@ hr{
     list-style: none;
     color: #FFFFFF;
 }
+/* animation add */
 .contact-icon{
+    text-decoration: none;
     margin-top: 40px;
     color: #FFFFFF;
     font-size: 40px;
     text-align: center;
     letter-spacing:40px;
+    animation: animationAdd 5s linear infinite;
+}
+@keyframes animationAdd {
+    0%{
+       font-size: 45px;
+        
+    }
+    75%{
+        font-size: 40px;
+    }
+    100%{
+        font-size:50px;
+  
+    }
+    
 }
 
 
@@ -247,6 +297,16 @@ hr{
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 30px;
         }
+        /* upcoming-match */
+                .box {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-gap: 20px;
+                }
+                .text{
+                    text-align: center;
+                }
+
     footer{
         width: 100%;
     }
@@ -264,4 +324,111 @@ hr{
             color: #FFFFFF;
             font-size: 20px;
         }
+}
+
+
+/* tablet View ≥768px */
+@media screen and (max-width: 768px) and(min-width: 585px){
+   
+    body{
+        width: 100%;
+    }
+    .header{
+        width:90%;
+        margin: 60px;
+        
+    }
+    .top-section{
+        width: 100%;
+    }
+    .match-details{
+        display:flex;
+        flex-direction: column;
+    }
+    .button-container{
+        background-color: #fff;
+        width: 90%;
+        display: flex;
+       justify-content: space-around;
+    }
+        .player-cart {
+    
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+                .top-section h1 {
+        
+                    font-size: 40px;
+                    padding: 20px;
+                }
+        
+                .top-section p {
+        
+                    font-size: 20px;
+                    line-height: 30px;
+                    padding: 20px;
+                }
+                .top-section-img img {
+                
+                    width: 320px;
+                    height: 540px;
+                }
+                .tablet-special-button button{
+                    visibility: visible;
+                    
+                }
+        footer{
+            width: 100%;
+        }
+        .navbar{
+            margin:20px;
+        }
+                .navbar ul {
+        
+                    display: flex;
+                    justify-content: space-between;
+                 
+                }
+                .navbar ul li {
+                    font-size:15px;
+                    margin-right: 20px;
+                }
+        
+                .navbar a {
+                    text-decoration: none;
+                    color: #FFFFFF;
+                }
+        
+                .navbar li {
+                    font-size:20px;
+                    margin-bottom: 40px;
+                    list-style: none;
+                    color: #FFFFFF;
+                }
+        
+                .contact-icon {
+                    margin-top: 40px;
+                    color: #FFFFFF;
+                    font-size: 40px;
+                    text-align: center;
+                    letter-spacing: 30px;
+                }
+
+
+                /* upcoming match section */
+               .box {
+                   display: grid;
+                   grid-template-columns: repeat(2, 1fr);
+                   grid-gap: 20px;
+                                
+                }
+                .text {
+                  text-align: center;
+                }
+                .tablet-special-button button{
+                    visibility: visible;
+                }
+                
+                 
 }
