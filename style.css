@@ -38,10 +38,32 @@ body{
     border-radius: 5px;
     margin-top: 30px;
     transition: padding 0.3s;
+    animation: buttonAnimation 2s ease-in 1s infinite;
+}
+.header button i {
+    font-size: 20px;
+    margin-left: 10px;
+    
 }
 .header button:hover{
     padding: 20px 30px;
 }
+
+
+
+/* animation */
+@keyframes buttonAnimation {
+    0%{
+        background-color: #DD0000;
+    }
+    50%{
+        background-color:#da4e4ece;
+    }
+    100%{
+        background-color: #DD0000;
+    }
+}
+
 
 
 
@@ -253,7 +275,7 @@ hr{
 /* mobile phone */
 
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:586px)  {
     body{
         width: 90%;
     }
@@ -290,6 +312,7 @@ hr{
     }
     .button-container{
         background-color: #85626200;
+        margin-left: 0;
     }
         .player-cart {
     
@@ -328,7 +351,7 @@ hr{
 
 
 /* tablet View ≥768px */
-@media screen and (max-width: 768px) and(min-width: 585px){
+@media screen and (min-width: 768px){
    
     body{
         width: 100%;
